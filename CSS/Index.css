@@ -9,12 +9,6 @@ body{
   background-color:aliceblue;
 }
 
-.item-a{
-  grid-area: header;
-}
-
-
-
 #Wrapper{
   display: grid;
   grid-template-rows: auto;
@@ -26,10 +20,38 @@ body{
 
 #EpicBox{
   grid-area: box;
+  border-color: black;
+  border-style: groove;
+  border-width: 5px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#GeneratePassword{
+  background-color: green;
+  height: 50px;
+  font-size: large;
+  align-self: flex-start;
+}
+
+form{
+  height: 100%;
+  display: grid;
+}
+
+header{
+  grid-area: header;
+  border-color: black;
+  border-style: groove;
+  border-width: 5px;
+  border-top: 0px;
+  border-bottom: 0px;
+
+  align-self: flex-start;
 }
 
 h1{
-  grid-area: header;
   padding-top: 2rem;
   font-size: 40px;
   
@@ -37,4 +59,13 @@ h1{
 
 footer{
   grid-area: footer;
+  border-color: black;
+  border-style: groove;
+  border-width: 5px;
+  border-top: 0px;
+  border-bottom: 0px;
+
+ align-self: flex-end;
+ margin-left: auto;
+ margin-right: auto;
 }

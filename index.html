@@ -8,11 +8,14 @@
     <script src="/JS/index.js"></script>
   </head>
 
+<header>
+  <h1>Välkommen till WoE-password Generator</h1>
+</header>
+
   <body id="Wrapper">
-    <h1>Välkommen till WoE-password Generator</h1>
     <!-- innehåll -->
     <div id="EpicBox">
-      <p id="PasswordField" hidden></p>
+      <p id="PasswordField" >PasswordField</p>
       <form action=# method="POST" id="PasswordForm">
         <label for="CharacterAmount">Antalet tecken</label>
       <select name="CharacterAmount" id="CharacterAmount">
@@ -26,11 +29,11 @@
       
       <label for="SpecialCharacter">Specialtecken: !?"£§∞@
       <input type="checkbox" id="SpecialCharacter" name="SpecialCharacter">
-    </label>
+      </label>
 
       <label for="CapitalLetters">Stora bokstäver: ABC
       <input type="checkbox" id="CapitalLetters" name="CapitalLetters">
-    </label>
+      </label>
 
       <label for="LowerCaseLetters">Små bokstäver: abc
       <input type="checkbox" id="LowerCaseLetters" name="LowerCaseLetters">
@@ -39,7 +42,7 @@
 
 
 
-      <br>
+
       <button id="GeneratePassword">Generera</button>
     </form>
   </div>
