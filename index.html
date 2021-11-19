@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="CSS/reset.css" />
     <link rel="stylesheet" href="CSS/Index.css">
+    <script src="/JS/index.js"></script>
   </head>
 
   <body>
@@ -12,7 +13,7 @@
     <!-- innehåll -->
     <div id="EpicBox">
       <p id="PasswordField" hidden></p>
-      <form action="InputData" method="POST">
+      <form action=# method="POST" id="PasswordForm">
         <label for="CharacterAmount">Antalet tecken</label>
       <select name="CharacterAmount" id="CharacterAmount">
         <option value="6">6</option>
@@ -23,20 +24,23 @@
         <option value="1337">1337</option>
       </select>
       
-      <label for="SpecialCharacter">Specialtecken: !?"£§∞@</label>
+      <label for="SpecialCharacter">Specialtecken: !?"£§∞@
       <input type="checkbox" id="SpecialCharacter" name="SpecialCharacter">
+    </label>
 
-      <label for="CapitalLetters">Stora bokstäver: ABC</label>
+      <label for="CapitalLetters">Stora bokstäver: ABC
       <input type="checkbox" id="CapitalLetters" name="CapitalLetters">
+    </label>
 
-      <label for="LowerCaseLetters">Små bokstäver: abc</label>
+      <label for="LowerCaseLetters">Små bokstäver: abc
       <input type="checkbox" id="LowerCaseLetters" name="LowerCaseLetters">
+      </label>
       
 
 
 
       <br>
-      <button>Generera</button>
+      <button id="GeneratePassword">Generera</button>
     </form>
   </div>
 </body>
