@@ -2,12 +2,39 @@ html,body{
   padding: auto;
   margin: auto;
   text-align: center;
+  height: 100%;
 }
 
 body{
   background-color:aliceblue;
 }
 
+.item-a{
+  grid-area: header;
+}
+
+
+
+#Wrapper{
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "header header header"
+  ". box ."
+  "footer footer footer";
+}
+
+#EpicBox{
+  grid-area: box;
+}
+
 h1{
-  margin-top: 20%;
+  grid-area: header;
+  padding-top: 2rem;
+  font-size: 40px;
+  
+}
+
+footer{
+  grid-area: footer;
 }
