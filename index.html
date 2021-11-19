@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Projekt</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="CSS/reset.css" />
-  </head>
 
-  <body>
-    <h1>Välkommen till WoE-password Generator</h1>
-    <!-- innehåll -->
-    <div id="EpicBox">
-      <p id="PasswordField" hidden></p>
-      <form action="InputData">
-        <label for="CharacterAmount">Antalet tecken</label>
-        <br>
+<head>
+  <title>Projekt</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="CSS/reset.css" />
+</head>
+
+<body>
+  <h1>Välkommen till WoE-password Generator</h1>
+  <!-- innehåll -->
+  <div id="EpicBox">
+    <p id="PasswordField" hidden></p>
+    <form action="InputData" method="POST">
+
+      <label for="CharacterAmount">Antalet tecken</label>
       <select name="CharacterAmount" id="CharacterAmount">
-        <option value="1"></option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="1337">1337</option>
       </select>
-      <select name="" id="">
-        <option value=""></option>
-      </select>
-      <select name="" id=""></select>
+      
+      <label for="SpecialCharacter">Specialtecken: !?"£§∞@</label>
+      <input type="checkbox" id="SpecialCharacter" name="SpecialCharacter">
+
+      <label for="CapitalLetters">Stora bokstäver: ABC</label>
+      <input type="checkbox" id="CapitalLetters" name="CapitalLetters">
+
+      <label for="LowerCaseLetters">Små bokstäver: abc</label>
+      <input type="checkbox" id="LowerCaseLetters" name="LowerCaseLetters">
+      
+
+
+
       <br>
       <button>Generera</button>
     </form>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>
