@@ -14,7 +14,7 @@ body{
   grid-template-rows: auto;
   grid-template-areas: 
   "header header header"
-  ". box ."
+  "box password password"
   "footer footer footer";
 }
 
@@ -33,6 +33,12 @@ body{
   height: 50px;
   font-size: large;
   align-self: flex-start;
+}
+
+#Password{
+  grid-area: password;
+  align-self: center;
+  font-size: 50px;
 }
 
 form{
