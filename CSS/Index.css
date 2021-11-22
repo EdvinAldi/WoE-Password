@@ -7,6 +7,8 @@ html,body{
 
 body{
   background-color:aliceblue;
+  background-image: url('/IMAGES/output-onlinegiftools2.gif');
+  background-size: 20%;
 }
 
 #Wrapper{
@@ -20,8 +22,8 @@ body{
 
 #EpicBox{
   grid-area: box;
-  border-color: black;
-  border-style: groove;
+  border-color: palevioletred;
+  border-style: solid;
   border-width: 5px;
 
   margin-left: auto;
@@ -39,6 +41,12 @@ body{
   grid-area: password;
   align-self: center;
   font-size: 50px;
+}
+
+button{
+  background-color: green;
+  height: 50px;
+  font-size: large;
 }
 
 form{
@@ -62,6 +70,11 @@ h1{
   font-size: 40px;
   
 }
+
+h1,form,text,p{
+  color: aliceblue;
+}
+
 
 footer{
   grid-area: footer;
