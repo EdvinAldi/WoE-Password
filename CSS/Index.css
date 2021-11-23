@@ -54,7 +54,7 @@ button{
   
   box-shadow: 
   inset 0 0 0.5em 0 aliceblue,
-  0 0 0.5em 0 aliceblue;
+  0 0 0.5em 0.2em aliceblue;
   font-size: large;
   position: relative;
 }
