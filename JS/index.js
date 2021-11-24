@@ -1,7 +1,7 @@
 function betterMathRandom() {
-  const charArray = new Uint32Array(1);
+  const charArray = new Uint8Array(1);
   crypto.getRandomValues(charArray);
-  const betterRandom = charArray[0] / 4294967295;
+  const betterRandom = charArray[0] / 255;
   return betterRandom;
 }
 
@@ -13,11 +13,11 @@ PasswordLength.addEventListener("input", (Event => {
     output.innerText = "Måste vara ett mindre än 33"
   }
   else {
-    output.innerText = makeTheBestPassword(Event.target.value)
+    output.innerText = makeNumberPassword(Event.target.value)
   }
 }));
 
-
+//Returns one random UpperCase letter
 function randomUpperCase() {
   result = "";
   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -25,6 +25,7 @@ function randomUpperCase() {
   return result;
 }
 
+//Returns one random LowerCase letter
 function randomLowerCase() {
   result = "";
   const characters = "abcdefghijklmnopqrstuvwxyz";
@@ -32,6 +33,7 @@ function randomLowerCase() {
   return result;
 }
 
+//Returns one random special character
 function specialCharacter () {
   result = "";
   const characters = "!?£\"§∞@"
@@ -39,6 +41,7 @@ function specialCharacter () {
   return result;
 }
 
+//Returns one random number 
 function numberCharacter () {
   result = "";
   const characters = "0123456789"
@@ -46,14 +49,18 @@ function numberCharacter () {
   return result;
 }
 
+
+
 function makeTheBestPassword(length) {
   let result = '';
   const characters = "";
+  const charactersLength = characters.length;
   const randomCharacterArray = [randomUpperCase,randomLowerCase,specialCharacter,numberCharacter];
 
   for (let i = 0; i < length; i++) {
     let test = getRandomInt();
     result += randomCharacterArray[test]();
+
   }
   return result;
 }
