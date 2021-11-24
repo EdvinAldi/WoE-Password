@@ -13,7 +13,7 @@ PasswordLength.addEventListener("input", (Event => {
     output.innerText = "Måste vara ett mindre än 33"
   }
   else {
-    output.innerText = makeNumberPassword(Event.target.value)
+    output.innerText = makeTheBestPassword(Event.target.value)
   }
 }));
 
