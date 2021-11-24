@@ -1,7 +1,7 @@
 function betterMathRandom() {
-  const charArray = new Uint8Array(1);
+  const charArray = new Uint32Array(1);
   crypto.getRandomValues(charArray);
-  const betterRandom = charArray[0] / 255;
+  const betterRandom = charArray[0] / 4294967295;
   return betterRandom;
 }
 
@@ -46,18 +46,14 @@ function numberCharacter () {
   return result;
 }
 
-
-
 function makeTheBestPassword(length) {
   let result = '';
   const characters = "";
-  const charactersLength = characters.length;
   const randomCharacterArray = [randomUpperCase,randomLowerCase,specialCharacter,numberCharacter];
 
   for (let i = 0; i < length; i++) {
     let test = getRandomInt();
     result += randomCharacterArray[test]();
-
   }
   return result;
 }
