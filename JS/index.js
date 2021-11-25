@@ -58,17 +58,11 @@ function makeTheBestPassword(length) {
   const functionArray = arrayBuilder();
 
   for (let i = 0; i < length; i++) {
-    let test = getRandomInt();
+    let test = Math.floor(betterMathRandom() * arrayBuilder().length);
     result += functionArray[test]();
   }
   return result;
 }
-
-//Returns random int between 0 and length of array.
-function getRandomInt() {
-  return Math.floor(betterMathRandom() * arrayBuilder().length);
-}
-
 
 const GeneratePassword = document.getElementById("GeneratePassword");
 //Eventlistener on "Generera" button and sets password output to makeTheBestPassword function that takes getNumberOfCharacters as params.
