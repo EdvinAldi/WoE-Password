@@ -94,3 +94,23 @@ function arrayBuilder() {
   }
   return randomCharacterArray;
 }
+
+//Hides copy button when input is 0
+NumberOfCharacters.addEventListener("input", Event => {
+  const button = document.getElementById("CopyButton");
+  if (Event.target.value < 1) {
+    button.hidden = true;
+  } else {
+    button.hidden = false;
+  }
+});
+
+//Copies password to clipboard
+function copyFunction() {
+  var copyText = document.getElementById("Output").innerText;
+
+  navigator.clipboard.writeText(copyText);
+}
+//
+const copyButton = document.getElementById("CopyButton");
+copyButton.addEventListener("click", copyFunction);

@@ -18,7 +18,7 @@
   <div id="EpicBox">
     <form id="PasswordForm" onsubmit="return false">
       <label for="CharacterAmount">Antal tecken, max 32</label>
-      <input type="number" id="NumberOfCharacters" max="32">
+      <input type="number" id="NumberOfCharacters" max="32" min="0">
 
       <label for="SpecialCharacter">Specialtecken: !?"£§∞@
         <input type="checkbox" id="SpecialCharacter" name="SpecialCharacter">
@@ -41,7 +41,7 @@
   </div>
   <div id="Password">
     <p id="Output">Password</p>
-    <button>Copy</button>
+    <button id="CopyButton">Copy</button>
   </div>
 </body>
 <footer>
