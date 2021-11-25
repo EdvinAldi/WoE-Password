@@ -51,7 +51,6 @@ function numberCharacter() {
   return result;
 }
 
-
 //Uses arrayBuilder method to build array with functions.
 //Takes user input and randomizes characters depending on functions in array
 function makeTheBestPassword(length) {
@@ -72,7 +71,6 @@ function getRandomInt() {
 
 
 const GeneratePassword = document.getElementById("GeneratePassword");
-
 //Eventlistener on "Generera" button and sets password output to makeTheBestPassword function that takes getNumberOfCharacters as params.
 GeneratePassword.addEventListener("click", function () {
   const output = document.getElementById("Output");
@@ -96,3 +94,23 @@ function arrayBuilder() {
   }
   return randomCharacterArray;
 }
+
+//Hides copy button when input is 0
+NumberOfCharacters.addEventListener("input", Event => {
+  const button = document.getElementById("CopyButton");
+  if (Event.target.value < 1) {
+    button.hidden = true;
+  } else {
+    button.hidden = false;
+  }
+});
+
+//Copies password to clipboard
+function copyFunction() {
+  var copyText = document.getElementById("Output").innerText;
+
+  navigator.clipboard.writeText(copyText);
+}
+//
+const copyButton = document.getElementById("CopyButton");
+copyButton.addEventListener("click", copyFunction);
