@@ -17,7 +17,6 @@ PasswordLength.addEventListener("input", (Event => {
   }
 }));
 
-
 function randomUpperCase() {
   result = "";
   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
