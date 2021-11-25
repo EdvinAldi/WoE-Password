@@ -24,9 +24,17 @@ body{
 #EpicBox{
   grid-area: box;
 
-
+  border-top: 2px;
+  border-bottom: 2px;
+  border-style:solid;
+  border-color: aliceblue;
+  border-radius: 1em 1em 1em 1em;
   margin-left: auto;
   margin-right: auto;
+}
+
+label{
+  padding-top: 1em;
 }
 
 #GeneratePassword{
@@ -68,8 +76,8 @@ button{
 button::before{
   content: '';
   position: absolute;
-  background: aliceblue;
-  top: 120%;
+  background: greenyellow;
+  top: 90%;
   left: 0;
   width: 100%;
   height: 100%;
