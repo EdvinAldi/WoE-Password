@@ -16,7 +16,7 @@ body{
   grid-template-rows: auto;
   grid-template-areas: 
   "header header header"
-  "box password password"
+  "box password ."
   "footer footer footer";
 }
 
@@ -39,6 +39,10 @@ body{
   grid-area: password;
   align-self: center;
   font-size: 50px;
+}
+
+#Output{
+  position: relative;
 }
 
 /*MAKES BUTTONS NEON*/
