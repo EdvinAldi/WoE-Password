@@ -4,7 +4,7 @@ const PasswordLength = document.getElementById("NumberOfCharacters");
 
 //Event listener listening to number input from user
 PasswordLength.addEventListener("input", (Event => {
-  const output = document.getElementById("output");
+  const output = document.getElementById("Output");
   if (Event.target.value > 32) {
     output.innerText = "Måste vara ett mindre än 33"
   }
@@ -75,7 +75,7 @@ const GeneratePassword = document.getElementById("GeneratePassword");
 
 //Eventlistener on "Generera" button and sets password output to makeTheBestPassword function that takes getNumberOfCharacters as params.
 GeneratePassword.addEventListener("click", function () {
-  const output = document.getElementById("output");
+  const output = document.getElementById("Output");
   output.innerText = makeTheBestPassword(getNumberOfCharacters());
 });
 
