@@ -51,7 +51,6 @@ function numberCharacter() {
   return result;
 }
 
-
 //Uses arrayBuilder method to build array with functions.
 //Takes user input and randomizes characters depending on functions in array
 function makeTheBestPassword(length) {
@@ -72,7 +71,6 @@ function getRandomInt() {
 
 
 const GeneratePassword = document.getElementById("GeneratePassword");
-
 //Eventlistener on "Generera" button and sets password output to makeTheBestPassword function that takes getNumberOfCharacters as params.
 GeneratePassword.addEventListener("click", function () {
   const output = document.getElementById("Output");
