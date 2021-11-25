@@ -13,9 +13,15 @@ PasswordLength.addEventListener("input", (Event => {
     output.innerText = "Måste vara ett mindre än 33"
   }
   else {
-    output.innerText = makeNumberPassword(Event.target.value)
+    output.innerText = makeTheBestPassword(Event.target.value)
   }
 }));
+
+function getNumberOfCharacters () {
+  const numberOfCharacters = document.getElementById("NumberOfCharacters");
+  console.dir(numberOfCharacters.value);
+  return numberOfCharacters.value;
+}
 
 //Returns one random UpperCase letter
 function randomUpperCase() {
@@ -53,20 +59,24 @@ function numberCharacter () {
 
 function makeTheBestPassword(length) {
   let result = '';
-  const characters = "";
-  const charactersLength = characters.length;
-  const randomCharacterArray = [randomUpperCase,randomLowerCase,specialCharacter,numberCharacter];
+   const randomCharacterArray = [randomUpperCase,randomLowerCase,specialCharacter,numberCharacter];
+  const KukArray = arrayBuilder();
+  console.dir(KukArray);
+
+  
+  
 
   for (let i = 0; i < length; i++) {
+    // result += randomCharacterArray[test]();
     let test = getRandomInt();
-    result += randomCharacterArray[test]();
-
+    result += KukArray[test]();
   }
+  console.dir(result);
   return result;
 }
 
 function getRandomInt() {
-  return Math.floor(betterMathRandom() * 4);
+  return Math.floor(betterMathRandom() * arrayBuilder().length);
 }
 
 function makeNumberPassword (length) {
@@ -78,4 +88,26 @@ function makeNumberPassword (length) {
       charactersLength));
   }
   return result;
+}
+
+const GeneratePassword = document.getElementById("GeneratePassword");
+GeneratePassword.addEventListener("click", function() {
+  const output = document.getElementById("output");
+  output.innerText = makeTheBestPassword(getNumberOfCharacters());
+});
+
+function arrayBuilder () {
+
+  let randomCharacterArray =  [numberCharacter];
+
+  if (document.getElementById("SpecialCharacter").checked === true) {
+    randomCharacterArray.push(specialCharacter);
+  }
+  if (document.getElementById("CapitalLetters").checked === true) {
+    randomCharacterArray.push(randomUpperCase);
+  }
+  if(document.getElementById("LowerCaseLetters").checked === true) {
+    randomCharacterArray.push(randomLowerCase);
+  }
+  return randomCharacterArray;
 }
