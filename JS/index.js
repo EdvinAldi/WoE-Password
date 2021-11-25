@@ -1,3 +1,4 @@
+
 function betterMathRandom() {
   const charArray = new Uint32Array(1);
   crypto.getRandomValues(charArray);
@@ -73,7 +74,9 @@ function makeNumberPassword (length) {
   let result = '';
   const characters = '0123456789';
   const charactersLength = characters.length;
+
   for (let i = 0; i < length; i++) {
+
     result += characters.charAt(Math.floor(betterMathRandom() *
       charactersLength));
   }
