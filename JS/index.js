@@ -108,3 +108,13 @@ function copyFunction() {
 //
 const copyButton = document.getElementById("CopyButton");
 copyButton.addEventListener("click", copyFunction);
+
+const sminem = document.getElementById("Sminem");
+
+sminem.addEventListener("click", sminemFunction);
+
+function sminemFunction() {
+  const background = document.getElementById("Wrapper");
+  background.style.background = "url('../pictures/sminem.jpeg')"
+}
+
