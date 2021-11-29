@@ -18,7 +18,7 @@
   <!-- innehåll -->
   <div id="EpicBox">
     <form id="PasswordForm" onsubmit="return false">
-      <label for="CharacterAmount">Antal tecken, max 32</label>
+      <label for="CharacterAmount">Ett tal mindre än 33</label>
       <input type="number" id="NumberOfCharacters" max="32" min="0">
 
       <label for="SpecialCharacter">Specialtecken: !?"£§∞@
@@ -32,21 +32,16 @@
       <label for="LowerCaseLetters">Små bokstäver: abc
         <input type="checkbox" id="LowerCaseLetters" name="LowerCaseLetters">
       </label>
-
-
-
-
-
       <button id="GeneratePassword">Generera</button>
     </form>
   </div>
   <div id="Password">
     <p id="Output">Password</p>
     <button id="CopyButton">Copy</button>
-    <button id="Sminem">Sminem Button</button>
   </div>
 </body>
 <footer>
   Cringe
 </footer>
+
 </html>

@@ -67,8 +67,13 @@ function makeTheBestPassword(length) {
 const GeneratePassword = document.getElementById("GeneratePassword");
 //Eventlistener on "Generera" button and sets password output to makeTheBestPassword function that takes getNumberOfCharacters as params.
 GeneratePassword.addEventListener("click", function () {
-  const output = document.getElementById("Output");
-  output.innerText = makeTheBestPassword(getNumberOfCharacters());
+  let userInput = document.getElementById("NumberOfCharacters");
+  if(isNaN(userInput) || userInput > 32 ||userInput < 0) {
+    document.getElementById("Output").innerText = "Dont even try bro";
+  } else {
+    const output = document.getElementById("Output");
+    output.innerText = makeTheBestPassword(getNumberOfCharacters());
+  }
 });
 
 //Builds an array with functions depending on their boolean value from checkboxes.
@@ -105,16 +110,7 @@ function copyFunction() {
 
   navigator.clipboard.writeText(copyText);
 }
-//
+
 const copyButton = document.getElementById("CopyButton");
 copyButton.addEventListener("click", copyFunction);
-
-const sminem = document.getElementById("Sminem");
-
-sminem.addEventListener("click", sminemFunction);
-
-function sminemFunction() {
-  const background = document.getElementById("Wrapper");
-  background.style.background = "url('../pictures/sminem.jpeg')"
-}
 
