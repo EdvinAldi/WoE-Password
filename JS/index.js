@@ -68,7 +68,7 @@ const GeneratePassword = document.getElementById("GeneratePassword");
 //Eventlistener on "Generera" button and sets password output to makeTheBestPassword function that takes getNumberOfCharacters as params.
 GeneratePassword.addEventListener("click", function () {
   let userInput = document.getElementById("NumberOfCharacters").value;
-  if(!Number.isNaN(userInput) || userInput > 32 || userInput < 0) {
+  if (Number.isNaN(userInput) || userInput > 32 || userInput < 0) {
     document.getElementById("Output").innerText = "Dont even try bro";
   } else {
     const output = document.getElementById("Output");
